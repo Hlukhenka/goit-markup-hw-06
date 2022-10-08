@@ -657,7 +657,6 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .list-footer-icon {
   display: flex;
   gap: 10px;
@@ -706,13 +705,13 @@ p {
   margin-left: 93px;
 }
 
-
-.footer-input-list {
+.footer-form {
   display: flex;
   gap: 12px;
 }
 
 .footer-input-email {
+  outline: none;
   width: 358px;
   height: 50px;
   padding-left: 10px;
@@ -720,6 +719,7 @@ p {
   background-color: var(--footer-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  color: var(--primary-text-color);
 }
 
 .btn-footer {
@@ -810,14 +810,12 @@ p {
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close:hover,
 .button-close:focus {
   fill: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 .title-modal {
@@ -858,6 +856,7 @@ p {
 
 .form-input {
   padding-left: 40px;
+  outline: none;
 
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -890,7 +889,9 @@ p {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-text-color);
 }
+
 .textarea:focus {
   border: var(--accent-color);
 }
@@ -918,7 +919,7 @@ p {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .checkbox-icon {
+.checkbox:checked:focus + .checkbox-icon {
   border-color: transparent;
   background-color: var(--accent-color);
   background-image: url("../images/check.svg");
@@ -953,7 +954,7 @@ p {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  
+
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
