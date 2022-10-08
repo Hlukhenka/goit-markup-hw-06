@@ -929,6 +929,16 @@ p {
   background-position: 50% 50%;
 }
 
+.checkbox:focus + .checkbox-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url("../images/check.svg");
+  background-size: contain;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .label-checkbox {
   display: flex;
   align-items: center;
