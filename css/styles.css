@@ -884,16 +884,19 @@ p {
 
 .textarea {
   resize: none;
+  outline: none;
   height: 120px;
   padding: 12px 16px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--primary-text-color);
 }
 
 .textarea:focus {
-  border: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  
 }
 
 .checkbox {
@@ -919,25 +922,17 @@ p {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .checkbox-icon {
-  border-color: transparent;
-  background-color: var(--accent-color);
-  background-image: url("../images/check.svg");
-  background-size: contain;
-  background-origin: border-box;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
+.checkbox:checked + .checkbox-icon,
 .checkbox:focus + .checkbox-icon {
   border-color: transparent;
   background-color: var(--accent-color);
   background-image: url("../images/check.svg");
   background-size: contain;
   background-origin: border-box;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
   background-position: 50% 50%;
 }
+
 
 .label-checkbox {
   display: flex;
